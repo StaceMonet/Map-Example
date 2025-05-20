@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html> 
+<head> 
+   <meta http-equiv="content-type" content="text/html; charset=UTF-8"/> 
+   <title>A titilating title </title>
+    
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1.0" />
+    <!-- css -->  
+    <link href="css/styles.css" type="text/css" rel="stylesheet" media="screen"> 
+    <!-- js -->  
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script> 
+    <script src="js/markerData.js" type="text/javascript"> </script>
+    <script type="text/javascript" 
+           src="http://maps.google.com/maps/api/js?key=AIzaSyBrjNmtcByo5IiJgiwmPs0LD_voneI3BgU">
+    </script>
+</head> 
+<body> 
+    
+    <div id="categories_wrapper"> 
+        <ul id="categories_list"> 
+            
+            
+            <li class="category_item">
+                <a id="att_button" class="category_buttons" href="#show_map">
+                    <div id="bg_image1" class="bg_images"> </div>
+                    <p class="cat_text"> Attractions </p>
+                </a>
+            </li> 
+              
+            <li class="category_item">
+                <a id="bt_button" class="category_buttons" href="#show_map">
+                    <div id="bg_image2" class="bg_images"> </div>
+                    <p class="cat_text"> Bus Tours </p> 
+                </a> 
+            </li>
+            <li class="category_item">
+                <a id="lm_button" class="category_buttons" href="#show_map">
+                    <div id="bg_image3" class="bg_images"> </div>
+                    <p class="cat_text"> Landmarks </p> 
+                </a>       
+            </li>
+            <li class="category_item">
+                <a id="mus_button" class="category_buttons" href="#show_map">
+                    <div id="bg_image4" class="bg_images"> </div>
+                    <p class="cat_text"> Museums </p> 
+                </a>
+            </li>
+            <li class="category_item">
+                <a id="rc_button" class="category_buttons" href="#show_map">
+                    <div id="bg_image5" class="bg_images"> </div>
+                    <p class="cat_text"> River Cruise </p> 
+                </a>
+            </li> 
+            <li class="category_item">
+                <a id="ss_button" class="category_buttons" href="#show_map">
+                    <div id="bg_image6" class="bg_images"> </div>
+                    <p class="cat_text"> Sightseeing </p> 
+                </a>
+            </li>  
+            <li class="category_item">
+                <a id="tp_button" class="category_buttons" href="#show_map">
+                    <div id="bg_image7" class="bg_images"> </div>
+                    <p class="cat_text"> Theme Parks </p> 
+                </a>
+            </li>   
+       <li class="category_item"> 
+                <a id="wp_button" class="category_buttons" href="#show_map">
+                    <div id="bg_image8" class="bg_images"> </div>
+                    <p class="cat_text"> Water Parks </p>
+                </a> 
+            </li>    
+            <li class="category_item"> 
+                <a id="shows_button" class="category_buttons" href="#show_map">
+                    <div id="bg_image9" class="bg_images"> </div>
+                    <p class="cat_text"> Shows </p> 
+                </a>
+            </li>   
+        </ul>
+        
+        </div><!-- close map container --> 
+        
+        <div id="map_wrapper"> 
+        
+        <div id="map">  </div> 
+        
+
+        <a class="show_map" id="show_map"> </a>
+            
+            
+            
+            
+    <!-- Right side nav which holds clickible buttons for each item --> 
+    <nav id="sidebar_right" class="right_sidebar sidebars_container">
+        <div class="sidebar_content"> 
+        <a id="close_sidebar_right" class="closebtn_right">×</a>
+            <div id="list_wrapper"> 
+            <!--- items for each category ---> 
+                <div id="att_items_list" class="list_boxes">
+                    
+                    <a class="sidebar_buttons_right" href="#" id="le_button">London Eye</a>
+                    <a class="sidebar_buttons_right" href="#" id="hrc_button">Hard Rock Cafe</a>
+                    <a class="sidebar_buttons_right" href="#" id="mb_button">Medieval Banquet</a> 
+                    <a class="sidebar_buttons_right" href="#" id="rbion_button">Ripley's Believe it or Not</a>
+                    <a class="sidebar_buttons_right" href="#" id="la_button">London Aquarium</a>
+                    <a class="sidebar_buttons_right" href="#" id="lz_button">London Zoo</a>
+                    <a class="sidebar_buttons_right" href="#" id="wbstl_button">Warner Bros Studio London</a>
+                </div>
+        
+                <div id="bus_items_list" class="list_boxes">
+                    <a class="sidebar_buttons_right" href="#" id="bblst_button">Big Bus London Sightseeing Tour </a>
+                    <a class="sidebar_buttons_right" href="#" id="olst_button">Original London Sightseeing Tour</a>
+                    <a class="sidebar_buttons_right" href="#" id="slbn_button">See London by Night Tour</a> 
+                </div>
+        
+                <div id="lmarks_items_list" class="list_boxes">
+                    <a class="sidebar_buttons_right" href="#" id="tol_button">Tower of London</a>
+                    <a class="sidebar_buttons_right" href="#" id="le_button2">London Eye</a>
+                    <a class="sidebar_buttons_right" href="#" id="tb_button">Tower Bridge Exhibition</a>
+                    <a class="sidebar_buttons_right" href="#" id="wc_button">Windsor Castle</a>
+                    <a class="sidebar_buttons_right" href="#" id="hcp_button">Hampton Court Palace</a> 
+                </div>
+        
+                <div id="mus_items_list" class="list_boxes">
+                     <a class="sidebar_buttons_right" href="#" id="cwr_button">Churchill War Rooms</a> 
+                </div>
+                
+                <div id="rc_items_list" class="list_boxes">
+                    <a class="sidebar_buttons_right" href="#" id="ldt_button">London Duck Tours</a>   
+                </div>
+                
+                <div id="ss_items_list" class="list_boxes">
+                    <a class="sidebar_buttons_right" href="#" id="bblst_button2">Big Bus London Sightseeing Tour </a>
+                    <a class="sidebar_buttons_right" href="#" id="olst_button2">Original London Sightseeing Tour</a>
+                    <a class="sidebar_buttons_right" href="#" id="slbn_button2">See London by Night Tour</a>
+                    <a class="sidebar_buttons_right" href="#" id="ldt_button2">London Duck Tours</a>  
+                    
+                </div>
+                
+                <div id="tp_items_list" class="list_boxes">
+                    <a class="sidebar_buttons_right" href="#" id="cwoa_button">Chessington World of Adventures</a> 
+                </div>
+                
+               <!-- <div id="wp_items_list" class="list_boxes">
+                    
+                </div> --> 
+                
+                <div id="shows_items_list" class="list_boxes">
+                    <a class="sidebar_buttons_right" href="#" id="catcf_button">Charlie and the Chocolate Factory</a>
+                    <a class="sidebar_buttons_right" href="#" id="tlk_button">The Lion King</a>
+                    <a class="sidebar_buttons_right" href="#" id="wkd_button">Wicked</a>
+                    <a class="sidebar_buttons_right" href="#" id="poto_button">Phantom of the Opera</a>
+                    <a class="sidebar_buttons_right" href="#" id="mm_button">Mamma Mia!</a> 
+                </div>
+                
+                
+            </div> <!-- end of list wrapper --> 
+        </div> <!-- end of class sidebar content --> 
+        <a href="#" id="show_sidebar_right" class="sidebar_buttons">See<br />List</a> 
+    </nav><!-- end of sidebar_right -->
+        
+    <!-- left nav which holds content for each --> 
+    <nav id="sidebar_left" class="left_sidebar sidebars_container">
+        <div class="sidebar_content sidebar_content_left">       
+            <a id="close_sidebar_left" class="closebtnleft" onclick="closeNavLeft()">×</a>
+            <!-- left sidenav which holds info about locations --> 
+                
+            <div id="tol_info" class="info_boxes">
+                <img src="images/item_imgs/tower_of_london.jpg" alt="Tower Of London" class="images"/> 
+                <p class="box_text"> Founded in 1066 by William the Conqueror, the Tower of London has been a potent symbol of the British monarchy for nearly 1000 years. 
+                <br /> <br />  
+                From its original use as the mighty fortress of the new Norman ruling elite, the Tower of London has also served as a Royal Mint, an armoury, the treasury, home of the Crown Jewels and of course, most infamously, since 1100 a prison. Being sent to the Tower became a famous phrase in London.  
+                </p>
+            </div> 
+        
+            <div id="wc_info" class="info_boxes"> 
+                <img src="images/item_imgs/windsor_castle.jpg" alt="Windsor Castle" class="images"/> 
+                <p class="box_text">
+                Windsor Castle is the oldest and largest occupied castle in the world, one of the official residences of the Queen, and represents 900 years of British history. Windsor Castle’s lavishly decorated State Apartments holds a large collection of fine art and paintings.                    
+                <br /> <br />     
+                In the grounds of Windsor Castle London stands St. George’s Chapel, an active centre of worship open to the public, where Prince Edward was married.                    
+                <br /> <br />    
+                Another highlight of a trip to Windsor Castle is Queen Mary’s Dolls House, with its working lifts, water and electricity supply.
+                </p>  
+            </div>
+     
+            <div id="hcp_info" class="info_boxes"> 
+                <img src="images/item_imgs/hampton_court.jpg" alt="Hampton Court Palace" class="images"> 
+                <p class="box_text">
+                Find out what it was really like to live and work at Hampton Court Palace, the retreat of many of Britain’s Kings and Queens. See Henry VIII’s medieval Great Hall, hung with colourful tapestries, where Shakespeare’s company once performed.
+                <br /> <br /> 
+                Hampton Court is also famous for its maze, and new audio installations and touch sensitive benches evoke an atmosphere of intrigue with music and whispered conversations.
+                <br /> <br /> 
+                See the Tudor Kitchen where Royal banquets were prepared or hear spooky stories of Hampton Court Palace ghosts like the Grey Lady or the Haunted Gallery’s Screaming Lady, Catherine Howard
+                </p>  
+            </div>
+     
+            <div id="le_info" class="info_boxes"> 
+                <img src="images/item_imgs/london_eye.jpg" alt="London Eye" class="images"/> 
+                <p class="box_text">
+                The Coca-Cola London Eye is centrally located in the heart of the capital, gracefully rotating over the River Thames opposite the Houses of Parliament and Big Ben. At 135 metres, the Coca-Cola London Eye is the world’s tallest cantilevered observation wheel, offering breathtaking 360 degree views of the capital and its famous landmarks.
+                <br /> <br /> 
+                Whether it’s with family, friends or maybe a romantic Champagne Experience just for two, London Eye tickets are an integral part of any trip to London. See more of London for less with 365Tickets exclusive London Eye combination tickets.
+                </p>    
+            </div>
+     
+            <div id="tb_info" class="info_boxes">  
+                <img src="images/item_imgs/tower_bridge.jpg" alt="Tower Bridge Exhibition" class="images"/> 
+                <p class="box_text">
+                Completed in 1894 The Most Famous Bridge in the World is a marvel of Victorian engineering and the home of the Tower Bridge Exhibition.
+                <br /> <br /> 
+                At 42 metres above the river Thames, a visit to the Tower Bridge exhibition boasts spectacular panoramic views of some of London’s most famous landmarks: The London Eye, Canary Wharf, and St Paul’s Cathedral can all be seen from its high-level walkways – and the budding photographers will love that the specially designed windows make capturing that iconic image an easy task. Visitors to the exhibition will discover the rich history of Tower Bridge with an ever changing variety of content throughout the year.
+                <a href="" >Buy combination Tower Bridge Exhibition tickets </a> and Save with 365Tickets. </p> 
+            </div>
+     
+            <div id="rbion_info" class="info_boxes"> 
+                <img src="images/item_imgs/ripleys.jpg" alt="Ripley's Believe it or Not" class="images"/> 
+                <p class="box_text">
+                With over 700 authentic artefacts, exhibits and astonishing interactive experiences spanning across 6 floors, Ripley’s Believe It or Not! London celebrates the weird, wonderful and bizarre in all its forms.  
+                <br /> <br />  
+                Experience Ripley's interactive exhibits including the largest Mirror Maze in London and the newest addition to our attraction, the Impossible Laser Race, where guests can jump, crawl and twist their way between various beams to be awarded for their speed, strength and agility.
+                </p>       
+            </div>
+     
+            <div id="mb_info" class="info_boxes"> 
+                <img src="images/item_imgs/medieval_banquet.jpg" alt="Medieval Banquet" class="images"/> 
+                <p class="box_text">
+                Dine with King Henry VIII and his Court at a 4 course Medieval Banquet in the vaulted cellar of Ivory House, near Tower Bridge. Be entertained by jugglers, jesters, fire-eaters and minstrels as you tuck into a Medieval Banquet served to you by comely wenches, washed down with unlimited wine and beer.
+                <br /> <br />     
+                Feel free to enter into the spirit of Merrie Olde England - Get up and dance with the ladies or bang your plate for more victuals!
+                <br /> <br /> 
+                And, after the show there is a modern disco until 23.30pm.
+                </p>   
+            </div>
+     
+            <div id="hrc_info" class="info_boxes"> 
+                <img src="images/item_imgs/hard_rock_cafe.jpg" alt="Hard Rock Cafe" class="images"/> 
+                <p class="box_text">
+                Started in 1971, the Hard Rock Café is located on London’s Old Park Lane and features a menu of casual American fare and also holds one of the most expensive rock memorabilia collections in the world, including: Jimi Hendrix’s flying V guitar, Elvis Presley’s Jujitsu Suit, John Lennon’s hand written lyrics to Imagine and many more.
+                <br /> <br /> 
+                Buy a VIP entrance and beat the long queues with a Hard Rock Café Experience ticket from 365 Tickets where you can expect warm service and ubiquitous Rock 'n' Roll music and sensibility at the most famous Café in London.
+                </p>   
+            </div>
+      
+            <div id="ldt_info" class="info_boxes"> 
+                <img src="images/item_imgs/london_duck_tours.jpg" alt="London Duck Tours" class="images"/> 
+                <p class="box_text">
+                When you hop aboard one of our distinctive yellow vehicles, you enter the wonderful world of amphibious travel.  See the world famous sights of London, learn interesting facts about the city, and be entertained with an action packed live commentary before the thrilling splashdown onto the river Thames!  It’s terrific fun for everyone from three to ninety three.  <br /><br />     
+                Each vehicle seats 30 passengers with the tour lasting approximately 75 minutes. 
+                <br /> <br />     
+                The Ducks, originally used in the Second World War, have been completely rebuilt from scratch and modified to meet the stringent safety regulations set by the road and river authorities.
+                </p>   
+            </div>
+      
+            <div id="bblst_info" class="info_boxes"> 
+                <img src="images/item_imgs/big_bus_sightseeing.jpg" alt="The Big Bus London Sightseeing Tour" class="images"/> 
+                <p class="box_text">
+                The Big Bus London sightseeing tour takes you to all of London’s major iconic landmarks and reveals London’s colourful 2,000 year history.
+                <br /> <br /> 
+                This hop on, hop off, tour offers you a choice of a recorded multi-lingual commentary or a live commentary delivered by entertaining guides allowing you to discover many interesting facts and history of the many places of interest you pass along the way.
+                <br /> <br /> 
+                On a Big Bus Sightseeing Tour the 24 hour ticket gives you even more time to explore London’s popular attractions.
+                <br /> <br /> 
+                The Big Bus London Sightseeing tickets from 365 also includes a free cruise on the River Thames and a choice of 4 guided walking tours making it a perfect introduction to London and a fun day out for all.
+                </p>   
+            </div>
+      
+            <div id="olst_info" class="info_boxes"> 
+                <img src="images/item_imgs/orig_bus_sightseeing.jpg" alt="The Original London Sightseeing Tour" class="images"/> 
+                <p class="box_text">
+                The Original London Sightseeing Tour is a great way to see the spectacular sights of London - from the comfort and convenience of an open topped hop-on, hop off, bus.
+                <br /> <br />  
+                Your Original London Sightseeing Tour tickets enable you to choose between three routes, getting on and off when you please. Also included are live and multilingual audio commentaries, a free Kids Club activity pack, walking tours and a Thames River Cruise.
+                <br /> <br /> 
+                Original London Sightseeing Tour Yellow and Red Routes take you past many landmark buildings that you can hop off and visit, from Madame Tussauds to theTower of London. The Blue Route, known as the Museum Tour, runs past the British Museum,Kensington Palace and the Natural History and Science Museums.
+                </p>   
+            </div>
+      
+            <div id="wbstl_info" class="info_boxes"> 
+                <img src="images/item_imgs/warner_bros_studio.jpg" alt="Warner Bros Studio Tour" class="images"/> 
+                <p class="box_text">
+                Warner Bros. Studio Tour London is a behind-the-scenes walking tour which immerses guests into the world of film-making. The Studio Tour features authentic sets, costumes and props that showcase the British artistry, technology and talent that goes into producing world famous and successful movies. The Studio Tour focus on the Harry Potter film series, located at the Studios where they were filmed.
+                <br /> <br /> 
+                Warner Bros. Studio Tour London provides an amazing new opportunity to explore the magic of the Harry Potter™ films – the most successful film series of all time. This unique walking tour takes you behind-the-scenes and showcases a huge array of beautiful sets, costumes and props. It also reveals some closely guarded secrets, including facts about the special effects and animatronics that made these films so hugely popular all over the world.
+                 </p>    
+            </div>
+      
+            <div id="slbn_info" class="info_boxes"> 
+                <img src="images/item_imgs/see_london_by_night.jpg" alt="See London by Night Tour" class="images"/> 
+                <p class="box_text">
+                The See London by Night Bus Tour provides an opportunity to admire the capital’s most famous landmarks in all their floodlit splendour and with the benefits of full audio commentary. 
+                <br /> <br /> 
+                A 1hr and ½ hour trip atop an open-topped double-decker, the See London by Night Bus Tour takes you through the heart of London’s West End and historic areas of London, from the neon lights of Piccadilly Circus to the iconic clock face of Big Ben.
+                <br /> <br />
+                With See London by Night Bus Tour tickets from 365, you’ll have an unforgettable experience not to be missed by any visitor to the capital.
+                </p>   
+            </div>
+      
+            <div id="catcf_info" class="info_boxes"> 
+                <img src="images/item_imgs/charlie_and_the_chocolate.jpg" alt="charlie and the chocolate factory" class="images"/> 
+                <p class="box_text">
+                In the story of Charlie and the Chocolate Factory,  five lucky children find golden tickets in chocolate bars offering an all you can eat opportunity in the eccentric Willy Wonka’s  magical sweet factory, a dream come true!  The musical, Charlie and the Chocolate Factory is based on the popular children’s novel by Roald Dahl, and like all Dahl’s tales there are undercurrents of dark humour as the spoilt and the greedy meet a sticky end,  leaving humble Charlie Bucket the ultimate winner.
+                <br /> <br /> 
+                The stage production of Charlie and the Chocolate Factory is a visual feast, complete with Oompa Loompas, a chocolate garden, crazy characters and sumptuous sets, a “must see” for all Dahl fans.    
+                </p>   
+            </div>
+      
+            <div id="tlk_info" class="info_boxes"> 
+                <img src="images/item_imgs/the_lion_king.jpg" alt="the lion king" class="images"/> 
+                <p class="box_text">
+                The multi award winning stage version of Disney’s much loved animated film, The Lion King, is a must see for those with younger children, and this lavish production is sure to entertain parents too.
+                <br /> <br /> 
+                Thanks to the actions of his ruthless uncle Scar, reckless cub Simba must face many trials and tribulations before regaining his rightful position as the Lion King, ruler of the Pridelands. With its stunning sets, colourful costumes and evocative African rhythms , The Lion King transports the audience to the Serengeti Plains where this timeless story of good triumphing over evil takes place - a visual treat that has been a bestseller for over 10 years.     
+                </p>   
+            </div>
+      
+            <div id="wkd_info" class="info_boxes"> 
+                <img src="images/item_imgs/wicked.jpg" alt="wicked" class="images"/> 
+                <p class="box_text">
+                The musical Wicked has cast it’s spell over London’s West End and has been voted  Entertainment Weekly's best musical of the decade. Based on the 1995 novel by Gregory Maguire entitled “The Life and Times of the Wicked Witch of the West”, Wicked covers the backstory of the nice and nasty witches who featured in the film The Wizard of Oz.
+                <br /> <br /> 
+                Blonde, pretty and popular Glinda and the talented, feisty, green skinned Elphaba meet as Sorcery students and travel to the land of Oz,  before Dorothy arrives on the scene. Wicked questions whether Elphaba was all bad, or simply misunderstood, and whether Glinda was motivated by altruism or self interest.
+                <br /> <br /> 
+                See Wicked and decide for yourself!    
+                </p>   
+            </div>
+      
+            <div id="poto_info" class="info_boxes"> 
+                <img src="images/item_imgs/phantom_of_the_opera.jpg" alt="phantom of the opera" class="images"/> 
+                <p class="box_text">
+                The 1909 Gaston Leroux novel The Phantom of the Opera, which inspired Andrew Lloyd Webber's smash hit musical, is set in Paris’ Palais Garnier Opera House, where chorus girl Christine is coached to sing like “The Angel of Music” by the disfigured and disturbed Phantom of the Opera, Erik.
+                <br /> <br /> 
+                His obsession with her leads him to abduct her and threaten to blow up the Opera House if she tries to escape.  When she unmasks The Phantom and shows him that she recognises that beauty comes from within, he sets her free. Phantom of the Opera has spectacular special effects, superb singing and a strong storyline, which has enchanted audiences for over 26 years.    
+                </p>   
+            </div>
+      
+            <div id="mm_info" class="info_boxes"> 
+                <img src="images/item_imgs/mamma_mia.jpg" alt="mamma mia" class="images"/> 
+                <p class="box_text">
+                Despite it’s slightly implausible storyline, the clever use of well known Abba hits to tell the tale makes Mamma Mia! the ultimate feel good musical that audiences can’t help singing along to!
+                <br /> <br /> 
+                The setting for Mamma Mia! is an idyllic Greek Island where young Sophie’s mother owns a taverna. Dismayed at the prospect of not having a father to walk her down the aisle, Sophie sets out to discover his identity,  finds three possible suspects in her mother’s old diary, and secretly invites them to her wedding. Romantic comedy Mamma Mia! does have a happy ending, but not quite the one the audience expects! Great fun night out for Abba fans of all ages!   
+                </p>   
+            </div>
+            
+            <div id="cwr_info" class="info_boxes"> 
+                <img src="images/item_imgs/churchill_war_rooms.jpg" alt="churchill war rooms" class="images"/> 
+                <p class="box_text">
+                Hear those immortal words and other rousing wartime speeches by Britain’s most famous wartime leader, in the Churchill Museum and Cabinet War Rooms.
+                <br /> <br /> 
+                Situated in central London the Churchill Musuem and Cabinet War Rooms house the world’s only major museum dedicated to Churchill’s life. Using interactive multimedia screens you can discover the man behind the image- with five chapters providing a fascinating insight into the life of one of the 20th century’s most enduring icons. The Cabinet War Rooms were the nerve centre of Britain’s war effort during WWII – a maze of rooms including the Map Room and the War Cabinet Room, purpose built, deep below London’s streets, in an effort to avoid the barrage of bombing during the London blitz.  
+                </p>   
+            </div>
+            
+            <div id="cwr_info" class="info_boxes"> 
+                <img src="images/item_imgs/churchill_war_rooms.jpg" alt="Churchill War Rooms" class="images"/> 
+                <p class="box_text">
+                Hear those immortal words and other rousing wartime speeches by Britain’s most famous wartime leader, in the Churchill Museum and Cabinet War Rooms.
+                <br /> <br /> 
+                Situated in central London the Churchill Musuem and Cabinet War Rooms house the world’s only major museum dedicated to Churchill’s life. Using interactive multimedia screens you can discover the man behind the image- with five chapters providing a fascinating insight into the life of one of the 20th century’s most enduring icons. The Cabinet War Rooms were the nerve centre of Britain’s war effort during WWII – a maze of rooms including the Map Room and the War Cabinet Room, purpose built, deep below London’s streets, in an effort to avoid the barrage of bombing during the London blitz.  
+                </p>   
+            </div>
+            
+            <div id="cwoa_info" class="info_boxes"> 
+                <img src="images/item_imgs/chessington.jpg" alt="Chessington World of Adventures" class="images"/> 
+                <p class="box_text">
+                Chessington World of Adventures Resort is more than a great family day out - it is an expedition - a theme park, zoo and aquarium, all in one place!  90% of rides are suitable for under 12’s, and range from exhilarating roller coasters and splash rides to traditional fairground fun. Shows and talks take place throughout the day, and feeding times are always fun to watch.
+                <br /> 
+                Chessington’s resident Humboldt penguins have a new walk through enclosure with a covered seating area, and more than 1000 wild animals can be viewed from the Safari Skyway monorail, walkways and trails, or you can go on an exciting Zufari in an off-road vehicle. There are also insects and exotic birds to see, a sea lion show and a petting zoo.
+                <br /> <br />    
+
+                The SeaLife Centre has a walk-through ocean tunnel to view sharks and rays, a touch pool, and a variety of fascinating sea-creatures. 
+                </p>   
+            </div>
+            
+            <div id="la_info" class="info_boxes"> 
+                <img src="images/item_imgs/london_aquarium.jpg" alt="London Aquariam" class="images"/> 
+                <p class="box_text">
+                Buy Combination tickets for the SEA LIFE London Aquarium. 365Tickets offers Combo Tickets with a number of attractions in the area including London Eye, Tower of London and Windsor Castle. Combine these tickets with SEA LIFE London Aquarium to start creating new memories with 365Tickets.
+                <br /> <br /> 
+                Spread over three floors, the Sea Life London Aquarium houses 500 species of global aquatic life. Explore Shark Reef Encounter, a major new feature of Sea Life London Aquarium, from the glass tunnel walkway.
+                <br /> <br /> 
+                Another new attraction is the Gentoo Penguin Colony at Sea Life London Aquarium’s Ice Adventure - a frozen antarctic landscape where you can view penguins at play. 
+                </p>   
+            </div>
+            
+            <div id="lz_info" class="info_boxes"> 
+                <img src="images/item_imgs/london_zoo.jpg" alt="London Zoo" class="images"/> 
+                <p class="box_text">
+                Enjoy the beautiful Regent’s Park surroundings and heritage listed buildings at the world’s oldest scientific zoo.
+                <br /> <br /> 
+                The kids will love the Penguin Beach exhibit, recreating a South American beach with p-p-plenty of penguins including the Humboldt and Macaroni varieties.
+                <br /> <br /> 
+                Started in 1828 London Zoo England now boasts over 760 species of animal. From a multitude of mammals to the biggest of the big cats, London Zoo is not just a fantastic visitor attraction but also a world leading conservation project.
+                <br /> <br /> 
+                When you beat the queues with a London Zoo Fast Track Ticket, Your ticket helps ZSL secure a future for endangered animals by contributing to ZSL’s Conservation Programmes. 
+                </p>   
+            </div>
+            
+        </div> <!-- end of sidebar_content_left --> 
+        <a href="#" id="show_sidebar_left" class="sidebar_buttons">More<br />Info</a> 
+    </nav> <!-- close sidebar_left --> 
+        </div>         
+        
+
+<script src="js/markers.js" type="text/javascript"> </script> 
+<script src="js/openAndCloseSidebars.js" type="text/javascript"> </script>    
+</body>    
+</html>
