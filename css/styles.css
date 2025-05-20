@@ -142,7 +142,7 @@ a { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 .sidebars_container {
     position: relative;
     background-color: rgba(47,48,54,0.7);
-    height: 400px;
+    height: 840px;
     z-index: 10;
     width: 280px;
     color: #bbb;
@@ -155,8 +155,17 @@ a { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 /* original positions of sidebars */
 /* !important: these must be above .open_left/right_sidebar */ 
-.left_sidebar { float:left; top: -400px; left:-280px; }    
-.right_sidebar { float: right; top: -400px; right:-280px; } 
+.left_sidebar { 
+    float:left; 
+    top: -836px; 
+    left:-280px; 
+}    
+
+.right_sidebar { 
+    float: right; 
+    top: -836px; 
+    right:-280px; 
+} 
 
 /* sidebar button which open sidebars on left and right side of map */ 
 .sidebar_buttons {
@@ -182,7 +191,7 @@ a { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 /* content in sidebar: needed for overflow to work */    
 .sidebar_content { 
-    height:400px; 
+    height:800px; 
 }  
 
 /* classes which are used by jquery to change appearence of sidebar on click  */ 
