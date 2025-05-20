@@ -15,7 +15,7 @@ a { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 /*------------------------------ Outer Containers ---------------------------------*/ 
 
 #map_wrapper { 
-    margin: 20px 0 0px 0; 
+    margin: 0; 
     width: 100%;  
 }
 
@@ -76,7 +76,7 @@ a { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     background-size: 80px 80px;
 }
 
-#bg_image1 { background-image: url(../images/category_imgs/365tickets_attractions_icon.png);
+#bg_image1 { background-image: url(../images/category_imgs/365tickets_attractions_icon.svg);
 }
 #bg_image2 { background-image: url(../images/category_imgs/365tickets_bus_tour_icon.png);
 }
