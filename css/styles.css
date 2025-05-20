@@ -18,6 +18,7 @@ a { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     margin: 0; 
     width: 100%;  
     height:calc(80vh);
+    position: relative;
 }
 
 /* google map container */
@@ -140,7 +141,7 @@ a { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 /* styles for both sidebar containers */ 
 .sidebars_container {
-    position: relative;
+    position: absolute;
     background-color: rgba(47,48,54,0.7);
     height: 100vh;
     z-index: 10;
@@ -158,13 +159,13 @@ a { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 /* !important: these must be above .open_left/right_sidebar */ 
 .left_sidebar { 
     float:left; 
-    top: -836px; 
+    top: 0; 
     left:-280px; 
 }    
 
 .right_sidebar { 
     float: right; 
-    top: -836px;
+    top: 0px;
     right:-280px; 
 } 
 
@@ -383,7 +384,10 @@ a { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
         display: block;
     }
     
-    #categories_wrapper { margin-top:30px;  margin-bottom: -20px; }
+    #categories_wrapper { 
+        margin-top:30px;  
+        margin-bottom: -20px; 
+    }
     
     .bg_images { 
         width: 30px; 
