@@ -293,27 +293,31 @@ a { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 /* content inside left side nav */ 
 .box_text { 
-    color: #CCC; 
-    padding: 10px 17px;  
+    color: #CCC;
+    padding: 10px 17px;
     font-size: 14px;
-    width: 200px;
-    float:left; 
-    margin-top:-10px;
-    unicode-bidi:bidi-override;
+    /* width: 200px; */
+    float: left;
+    margin-top: -10px;
+    unicode-bidi: bidi-override;
     direction: ltr;
+    display: flex;
+    background-color: #222;
+    margin: 0 auto;
 }
 
 /* images for left side bar */ 
 .images {
-    display: block; 
-    width: 200px; 
-    height: 130px; 
-    float: left; 
-    margin: 15px 10px 25px 15px;
+    display: block;
+    width: 100%;
+    /* height: 130px; */
+    float: left;
+    /* margin-top: 50px; */
+    /* margin: 15px 10px 25px 15px; */
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
-    background-size: 200px 130px;  
+    background-size: 200px 130px;
 }
 
 /* the close button for left sidebar */
