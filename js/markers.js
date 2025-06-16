@@ -125,6 +125,14 @@ function displayMarkers(category, itemsList, categoryButton) {
                     }, 90000); // Delay in milliseconds
                 } else {
                     
+                    
+                    /* for each click .list_boxes is set back to display:none; */ 
+                $(".list_boxes").css('display', 'none');
+                /* the div gets called in this functions parameter is set to display:block; */
+                $(itemsList).css('display', 'block');
+                /* make markers visible on click */ 
+                markers[myi].setVisible(true);
+                    
                     console.log("not working");
                     
                     
@@ -152,15 +160,15 @@ function displayMarkers(category, itemsList, categoryButton) {
 // #items_list = references the div in html which holds the list of locations intended to be displayed
 // #category = references the id of the button/link which the user has to click on to display the content 
 
-displayMarkers("attractions", '#att_items_list', '#att_button');
-displayMarkers("bus_tours", '#bus_items_list', '#bt_button');
-displayMarkers("landmarks", '#lmarks_items_list', '#lm_button');
-displayMarkers("museums", '#mus_items_list', '#mus_button');
-displayMarkers("river_cruise", '#rc_items_list', '#rc_button');
-displayMarkers("sightseeing", '#ss_items_list', '#ss_button');
-displayMarkers("theme_parks", '#tp_items_list', '#tp_button');
-displayMarkers("water_parks", '#wp_items_list', '#wp_button');
-displayMarkers("shows", '#shows_items_list', '#shows_button');
+displayMarkers("attractions", '#att_items_list', '.att_button');
+displayMarkers("bus_tours", '#bus_items_list', '.bt_button');
+displayMarkers("landmarks", '#lmarks_items_list', '.lm_button');
+displayMarkers("museums", '#mus_items_list', '.mus_button');
+displayMarkers("river_cruise", '#rc_items_list', '.rc_button');
+displayMarkers("sightseeing", '#ss_items_list', '.ss_button');
+displayMarkers("theme_parks", '#tp_items_list', '.tp_button');
+displayMarkers("water_parks", '#wp_items_list', '.wp_button');
+displayMarkers("shows", '#shows_items_list', '.shows_button');
 
 /* centers map when window is resized */ 
 google.maps.event.addDomListener(window, 'resize', function() {

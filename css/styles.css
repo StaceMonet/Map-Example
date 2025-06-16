@@ -438,7 +438,9 @@ a { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     
 /*    #map {height: 250px;} */
     
-    #categories_list {margin-top: 50px;}
+    #categories_list {
+        margin-top: 50px;
+    }
     
     .cat_text { 
        
@@ -483,7 +485,7 @@ a { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }/* end of max width 620 */ 
 
 
-@media screen and (max-width : 520px){
+@media screen and (max-width : 620px){
     
     
     #mobile_header {
