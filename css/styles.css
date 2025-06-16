@@ -21,11 +21,22 @@ a { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     position: relative;
 }
 
+
+
+@media screen and (min-width : 521px){
+
 /* google map container */
 #map { 
     width: 100%; 
     height: calc(80vh);
 }
+
+#mobile_header { 
+    display:none;
+}
+}
+
+
 
 /* ------------------------ infowindows (for markers on map) --------------------- */  
 /* ---------------- note: these classes are called in markers.js -------------*/ 
@@ -225,6 +236,21 @@ a { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     transition: all 0.5s ease-in;
 }  
 
+.open_mobile_menu { 
+    left: 0;
+    -webkit-transition: all 0.5s ease-in;
+    -moz-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in;
+}
+
+.open_mobile_menu { 
+    height: 50vh;
+    -webkit-transition: all 0.5s ease-in;
+    -moz-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in;
+}
+
+
 /* clear_left and clear_right respond to jquery */ 
 /* and makes sidebar buttons dissapear when clicked */ 
 .clear_left { 
@@ -240,6 +266,14 @@ a { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     -moz-transition: all 0.5s ease-in;
     transition: all 0.5s ease-in;
 }   
+
+.clear_mobile { 
+    display:none; 
+    -webkit-transition: all 0.5s ease-in;
+    -moz-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in; 
+}
+  
 
 /* --------------------------- Right Sidebar Content ----------------------------------*/ 
 
@@ -402,7 +436,7 @@ a { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
         width: 100%; 
     }
     
-    #map {height: 250px;} 
+/*    #map {height: 250px;} */
     
     #categories_list {margin-top: 50px;}
     
@@ -450,10 +484,64 @@ a { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 
 @media screen and (max-width : 520px){
-    .category_item {
-        width:90%;    
+    
+    
+    #mobile_header {
+        width:100%;
+        display:block;
+        height:10vh;
+        background-color: #2f3036;
         
     }
+    
+    #mobile_header.update-menu {
+        height: 55vh;
+        
+    }
+    
+    
+    #mobile_buttons {
+        padding-top:20px;
+    }
+    
+    .mobile_icon {
+        padding:20px 10px;
+        margin-top:10px;
+    }
+    
+    .category_item {
+        width:90%;    
+    }
+    
+    #map {
+        height: calc(90vh);
+        transition: all 0.5s ease-in;
+    }
+
+    #map.update-map {  
+        height:calc(45vh);
+    }
+    
+    
+    #map,
+#mobile_header {
+  transition: height 0.5s ease-in;
+}
+    
+
+    #map_wrapper {
+        height:calc(90vh);
+    }
+    
+
+     #categories_wrapper { 
+        display:none;
+     }
+    
+    #categories_list {
+        margin-top:10px;
+    }
+    
     
     
 }

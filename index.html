@@ -14,8 +14,89 @@
     <script type="text/javascript" 
            src="https://maps.google.com/maps/api/js?key=AIzaSyBG-fCAPdDIfs_s00iF_K6ovKaFR-z2ymQ">
     </script>
+    
+
 </head> 
 <body>
+    
+    
+    <div id="mobile_header">
+        <div id="mobile_buttons">
+            <a href="#" id="show_mobile_header" class="mobile_icon">
+                <img width="50" src="images/burger-menu-left-svgrepo-com.svg"/>
+            </a> 
+            
+<!--
+        <button id="show_mobile_header" class="mobile_buttons">Show All</button>
+        <button>Filter</button>
+        <button>More Info</button>
+-->
+        </div>
+        
+        <!-- Right side nav which holds clickible buttons for each item --> 
+        
+        <ul id="categories_list"> 
+            <li class="category_item">
+                <a id="att_button" class="category_buttons" href="#show_map">
+                    <div id="bg_image1" class="bg_images"> </div>
+                    <p class="cat_text"> Attractions </p>
+                </a>
+            </li> 
+              
+            <li class="category_item">
+                <a id="bt_button" class="category_buttons" href="#show_map">
+                    <div id="bg_image2" class="bg_images"> </div>
+                    <p class="cat_text"> Bus Tours </p> 
+                </a> 
+            </li>
+            <li class="category_item">
+                <a id="lm_button" class="category_buttons" href="#show_map">
+                    <div id="bg_image3" class="bg_images"> </div>
+                    <p class="cat_text"> Landmarks </p> 
+                </a>       
+            </li>
+            <li class="category_item">
+                <a id="mus_button" class="category_buttons" href="#show_map">
+                    <div id="bg_image4" class="bg_images"> </div>
+                    <p class="cat_text"> Museums </p> 
+                </a>
+            </li>
+            <li class="category_item">
+                <a id="rc_button" class="category_buttons" href="#show_map">
+                    <div id="bg_image5" class="bg_images"> </div>
+                    <p class="cat_text"> River Cruise </p> 
+                </a>
+            </li>
+            <li class="category_item">
+                <a id="ss_button" class="category_buttons" href="#show_map">
+                    <div id="bg_image6" class="bg_images"> </div>
+                    <p class="cat_text"> Sightseeing </p> 
+                </a>
+            </li>
+            <li class="category_item">
+                <a id="tp_button" class="category_buttons" href="#show_map">
+                    <div id="bg_image7" class="bg_images"> </div>
+                    <p class="cat_text"> Theme Parks </p> 
+                </a>
+            </li>
+<!--
+            <li class="category_item"> 
+                <a id="wp_button" class="category_buttons" href="#show_map">
+                    <div id="bg_image8" class="bg_images"> </div>
+                    <p class="cat_text"> Water Parks </p>
+                </a> 
+            </li>    
+-->
+            <li class="category_item"> 
+                <a id="shows_button" class="category_buttons" href="#show_map">
+                    <div id="bg_image9" class="bg_images"> </div>
+                    <p class="cat_text"> Shows </p> 
+                </a>
+            </li>
+        </ul>
+    </div>
+    
+
     <div id="categories_wrapper"> 
         <ul id="categories_list"> 
             <li class="category_item">
@@ -395,6 +476,9 @@
     </div>         
         
     <script src="js/markers.js" type="text/javascript"> </script> 
-    <script src="js/openAndCloseSidebars.js" type="text/javascript"> </script>    
+    <script src="js/openAndCloseSidebars.js" type="text/javascript"> </script>   
+    <script src="js/markers-mobile-header.js" type="text/javascript"> </script>  
+    
+    
 </body>    
 </html>

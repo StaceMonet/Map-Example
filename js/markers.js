@@ -1,3 +1,10 @@
+function isMobile() {
+    
+    console.log("is mobeile")
+    return window.innerWidth <= 520;
+}
+
+
 /* declare the latidue and longitude coordinates for center of the map */
 var centerLatLang = {lat: 51.508742, lng: -0.120850};
 
@@ -21,7 +28,13 @@ function buttonClickers(buttonDiv, infoBoxHolder, latAndLang, marker, infoBoxHea
     buttonVar.onclick = function () {
         $(".info_boxes").css('display', 'none');
         $(infoBoxHolder).css('display', 'block');
-        map.setCenter(latAndLang);
+        
+        
+        console.log("buttonvar click");
+        
+        if (!isMobile()) {
+            map.setCenter(latAndLang);
+        }
         infowindow.open(map, marker);
         infowindow.setContent('<div class="infowindow_content"><h1 class="infowindow_heading">' + infoBoxHeader + '</h1> <a class="infowindow_btn"' + webUrl + '" target="_blank"> Buy Tickets </a></div>');
         marker.setZIndex(google.maps.Marker.MAX_ZINDEX + 1);
@@ -33,12 +46,17 @@ function markerClickers(marker, infoBoxHeader, webUrl, latLang, infoBoxHolder, i
     infowindow = new google.maps.InfoWindow({
     });
         
+    
+    console.log("marker clickers");
+    
     marker.addListener('click', function () {
         $(".info_boxes").css('display', 'none');
         $(infoBoxHolder).css('display', 'block');
         infowindow.open(map, this);
         infowindow.setContent('<div class="infowindow_content"><h1 class="infowindow_heading">' + infoBoxHeader + '</h1><a class="infowindow_btn"' + webUrl + '" target="_blank"> Buy Tickets </a></div>');
-        map.setCenter(latLang);
+        if (!isMobile()) {
+            map.setCenter(latLang);
+        }
         marker.setZIndex(google.maps.Marker.MAX_ZINDEX + 1);
         /*
         for (var j = 0; j < markers.length; j++) {
@@ -77,13 +95,48 @@ function displayMarkers(category, itemsList, categoryButton) {
         for (myi = 0; myi < markers.length; myi++) {
             /* if the markers in this category are exactly equal to the value set in the category parameter then display the markers */ 
             if (markers[myi].category === category) {
-                /* for each click .list_boxes is set back to display:none; */ 
+                
+                
+                
+                if (window.innerWidth <= 520) {
+                    // scroll to the top of the map manually
+                    $('html, body').animate({
+                        scrollTop: $('#mobile_header').offset().top
+                    });
+                }
+                
+                
+                if (window.innerWidth <= 520) {
+                    
+                    console.log("mobi working");
+                    
+                    
+                     /* for each click .list_boxes is set back to display:none; */ 
                 $(".list_boxes").css('display', 'none');
                 /* the div gets called in this functions parameter is set to display:block; */
                 $(itemsList).css('display', 'block');
                 /* make markers visible on click */ 
                 markers[myi].setVisible(true);
-                /* animate markers on category click */  markers[myi].setAnimation(google.maps.Animation.DROP); 
+                
+                /* animate markers on category click */
+                    // Delay animation on mobile
+                    setTimeout(() => {
+                        markers[myi].setAnimation(google.maps.Animation.DROP);
+                    }, 90000); // Delay in milliseconds
+                } else {
+                    
+                    console.log("not working");
+                    
+                    
+                    // Immediate animation on desktop
+                    markers[myi].setAnimation(google.maps.Animation.DROP);
+                }
+                
+                ///markers[myi].setAnimation(google.maps.Animation.DROP); 
+            
+                
+                
+                
             } else {
                 /* set markers visibility to false if they are not assigned to the right category*/ 
                 markers[myi].setVisible(false);
