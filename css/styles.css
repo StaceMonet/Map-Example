@@ -490,11 +490,8 @@ a { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
         margin-top:20px;
     }
     
-   
-    
     
     .category_item {
-/*        width: 80%;*/
         padding: 0;
         margin: auto;
     }
@@ -505,7 +502,7 @@ a { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     }
 
     #map.update-map {  
-        height:calc(70vh);
+        height:calc(70dvh);
     }
     
     #map, #mobile_header {
@@ -513,7 +510,7 @@ a { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     }
     
     #map_wrapper {
-        height:calc(90vh);
+        height:calc(90dvh);
     }
 
     #categories_wrapper { 
