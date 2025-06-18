@@ -71,7 +71,7 @@ for (let i = 0; i < markerData.length; i++) {
     });
 
     newMarker.category = markerData[i][1];
-    newMarker.setVisible(false);
+    newMarker.setVisible(true);
     markers.push(newMarker);
 
     markerClickers(newMarker, markerData[i][2], markerData[i][4], markerData[i][0], markerData[i][6]);

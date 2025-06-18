@@ -482,7 +482,7 @@ a { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     }
     
     #mobile_header.update-menu {
-        height: 30vh;
+        height: 35vh;
     }
     
     .mobile_icon {
@@ -502,7 +502,7 @@ a { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     }
 
     #map.update-map {  
-        height:calc(70dvh);
+        height:calc(65dvh);
     }
     
     #map, #mobile_header {
